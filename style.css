@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /* Fondo animado lila */
+  background: linear-gradient(-45deg, #e0aaff, #f3c1ff, #d8b0ff, #cda4ff);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 50px;
+  text-shadow: 2px 2px 8px #00000055;
+  font-family: 'Great Vibes', cursive; /* Fuente más bonita */
+  color: #fff;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 12px;
+  background: #ff77aa;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  background: #ff4d8c;
+  transform: scale(1.1);
+}
+
+#mensaje {
+  opacity: 0;
+  margin: 40px auto;
+  max-width: 800px;
+  font-size: 1.3em;
+  line-height: 1.6;
+  text-align: justify;
+  transition: opacity 1s ease;
+  padding: 0 20px; /* espacio a los lados */
+}
+
+#mensaje.mostrar {
+  opacity: 1;
+}
+
+#texto {
+  border-right: 2px solid #fff;
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.corazon {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 3em;
+  color: #ff4d8c;
+  animation: latir 1s infinite;
+}
+
+@keyframes latir {
+  0% {transform: scale(1);}
+  25% {transform: scale(1.2);}
+  50% {transform: scale(1);}
+  75% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+.globo {
+  position: absolute;
+  bottom: -100px;
+  width: 50px;
+  height: 70px;
+  border-radius: 50%;
+  animation: subir 12s infinite;
+}
+
+@keyframes subir {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-120vh);}
+}
+
+/* 📱 Ajustes para celulares */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+    margin-top: 30px;
+  }
+
+  #mensaje {
+    font-size: 1em;
+    padding: 0 15px;
+    text-align: left;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
