@@ -6,11 +6,13 @@ body {
   color: #fff;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
 
   /* Fondo animado lila */
   background: linear-gradient(-45deg, #e0aaff, #f3c1ff, #d8b0ff, #cda4ff);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
+  position: relative;
 }
 
 @keyframes gradient {
@@ -22,8 +24,8 @@ body {
 h1 {
   font-size: 3em;
   margin-top: 50px;
-  text-shadow: 2px 2px 8px #00000055;
-  font-family: 'Great Vibes', cursive; /* Fuente más bonita */
+  text-shadow: 2px 2px 10px #ffb6c1aa, 0 0 15px #ff99ee88;
+  font-family: 'Great Vibes', cursive;
   color: #fff;
 }
 
@@ -37,7 +39,7 @@ button {
   cursor: pointer;
   margin-top: 20px;
   transition: 0.3s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(255, 77, 140, 0.4);
 }
 
 button:hover {
@@ -52,12 +54,14 @@ button:hover {
   font-size: 1.3em;
   line-height: 1.6;
   text-align: justify;
-  transition: opacity 1s ease;
-  padding: 0 20px; /* espacio a los lados */
+  transition: opacity 1s ease, transform 1s ease;
+  padding: 0 20px;
+  transform: translateY(30px) scale(0.95);
 }
 
 #mensaje.mostrar {
   opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 #texto {
@@ -86,18 +90,27 @@ button:hover {
 .globo {
   position: absolute;
   bottom: -100px;
-  width: 50px;
-  height: 70px;
   border-radius: 50%;
-  animation: subir 12s infinite;
+  animation: subir 10s infinite linear;
 }
 
 @keyframes subir {
-  0% {transform: translateY(0);}
-  100% {transform: translateY(-120vh);}
+  0% {transform: translateY(0) rotate(0deg);}
+  100% {transform: translateY(-120vh) rotate(360deg);}
 }
 
-/* 📱 Ajustes para celulares */
+/* Partículas canvas */
+#particulas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ajustes para celulares */
 @media (max-width: 600px) {
   h1 {
     font-size: 2em;
