@@ -97,7 +97,7 @@ button:hover {
   bottom: -100px;
   width: 40px;
   height: 60px;
-  border-radius: 25%;
+  border-radius: 50%;
   opacity: 0.8;
   box-shadow: 0 0 10px rgba(255, 153, 238, 0.6);
   animation: subir 10s linear infinite;
@@ -126,4 +126,5 @@ button:hover {
     padding: 10px 20px;
   }
 }
+
 
