@@ -42,6 +42,7 @@ for (let i = 0; i < 25; i++) {
 
 function randomColor() {
   // Colores femeninos / pastel
-  const colores = ["#ff6b81", "#ff9f43", "#ffb6c1", "#ff99cc", "#a18cd1", "#c084f5", "#f8a5c2"];
+ const colores = ["#ff6b81", "#ff9f43", "#1e90ff", "#2ed573", "#eccc68", "#ffa502", "#a18cd1", "#c084f5"];
   return colores[Math.floor(Math.random() * colores.length)];
 }
+
